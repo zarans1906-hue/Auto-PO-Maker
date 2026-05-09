@@ -1,58 +1,152 @@
-# Auto PO Maker Bot
+# 🤖 Auto PO Maker Bot
 
-Bot Telegram untuk mencatat Purchase Order (PO) ke Google Sheets secara otomatis.
+Automation bot for recording Purchase Orders (PO) directly into Google Sheets through Telegram integration.
 
-## Setup
+Designed to simplify administrative workflows, reduce manual input, and improve operational efficiency.
 
-1. **Install dependencies:**
-   ```bash
-   npm install
+---
+
+## ✨ Features
+
+- ✅ Telegram-based Purchase Order automation
+- 📊 Automatic integration with Google Sheets
+- 🔒 User whitelist system using Telegram User ID
+- 💾 Persistent session management (`sessions.json`)
+- ⚡ Mutex system to prevent spreadsheet race conditions
+- 📅 Indonesian date format validation
+- 🛡️ User-friendly error handling
+- 📂 Automatic monthly sheet generation from template
+- 🏨 Multi-hotel spreadsheet support
+- 🚀 Fast and lightweight workflow automation
+
+---
+
+## 🛠️ Tech Stack
+
+- Node.js
+- Telegram Bot API
+- Google Sheets API
+- Google Service Account
+- dotenv
+
+---
+
+## 📸 Preview
+
+Add screenshots here:
+- Telegram bot interaction
+- Google Sheets result
+- Workflow process
+- Final invoice preview
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/username/auto-po-maker-bot.git
+cd auto-po-maker-bot
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3️⃣ Configure Environment Variables
+
+Copy `.env.example` to `.env`
+
+```bash
+cp .env.example .env
+```
+
+Fill all required values inside `.env`.
+
+---
+
+## 4️⃣ Setup Google Service Account
+
+- Create a Service Account from Google Cloud Console
+- Download the credentials JSON file
+- Extract required values into environment variables
+- Enable Google Sheets API access
+
+---
+
+## 5️⃣ Setup Google Sheets
+
+- Create spreadsheets for each hotel
+- Share spreadsheet access with the Service Account email
+- Set Spreadsheet IDs inside environment variables
+
+---
+
+## ▶️ Run The Bot
+
+```bash
+npm start
+```
+
+---
+
+# 📌 Environment Variables
+
+See `.env.example` for the complete list of required environment variables.
+
+---
+
+# 📖 Usage
+
+1. Start the bot using `/start`
+2. Select hotel destination
+3. Input transaction date  
+   Example:
+   ```text
+   27 Maret 2026
    ```
+4. Choose PO type:
+   - Regular
+   - Urgent
+5. Input PO number (Regular) or amount directly (Urgent)
+6. Input total PO amount
+7. Finalize invoice or continue adding data
 
-2. **Konfigurasi Environment Variables:**
-   - Copy `.env.example` ke `.env`
-   - Isi semua nilai yang diperlukan
+---
 
-3. **Setup Google Service Account:**
-   - Buat Service Account di Google Cloud Console
-   - Download credentials JSON
-   - Extract nilai-nilai dari JSON ke environment variables
+# 💬 Commands
 
-4. **Setup Google Sheets:**
-   - Buat spreadsheet untuk setiap hotel
-   - Pastikan Service Account memiliki akses edit ke spreadsheet
-   - Set ID spreadsheet di environment variables
+| Command | Description |
+|---|---|
+| `/start` | Start new session |
+| `/batal` | Reset current session |
+| `/help` | Display help information |
 
-5. **Jalankan bot:**
-   ```bash
-   npm start
-   ```
+---
 
-## Environment Variables
+# 🎯 Purpose
 
-Lihat `.env.example` untuk daftar lengkap environment variables yang diperlukan.
+This project was built to automate Purchase Order recording workflows and simplify administrative processes through Telegram and Google Sheets integration.
 
-## Fitur
+---
 
-- ✅ Whitelist user berdasarkan Telegram User ID
-- ✅ Persistent session menggunakan file `sessions.json`
-- ✅ Mutex per spreadsheet untuk mencegah race condition
-- ✅ Validasi format tanggal Indonesia
-- ✅ Error handling yang user-friendly
-- ✅ Otomatis generate sheet bulan baru dari template
+# 🚀 Benefits
 
-## Penggunaan
+- Faster administrative process
+- Reduces repetitive manual work
+- Minimizes human input error
+- Organized spreadsheet management
+- Easy to scale for multiple operational units
 
-1. Start bot dengan `/start`
-2. Pilih hotel
-3. Masukkan tanggal (format: DD MMMM YYYY, contoh: 27 Maret 2026)
-4. Pilih tipe PO (Regular/Urgent)
-5. Masukkan nomor PO (untuk Regular) atau langsung jumlah (untuk Urgent)
-6. Masukkan jumlah PO
-7. Pilih aksi selanjutnya atau finalize invoice
+---
 
-## Commands
+# 👨‍💻 Author
 
-- `/start` - Mulai sesi baru
-- `/batal` - Reset sesi
-- `/help` - Bantuan
+Made with passion by JEK
