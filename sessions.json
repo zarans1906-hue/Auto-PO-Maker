@@ -1,0 +1,24 @@
+{
+  "sessions": [
+    {
+      "id": "8041376316:8041376316",
+      "data": {
+        "step": "INPUT_TANGGAL",
+        "hotel": "🏨 HOB",
+        "tanggal": null,
+        "tipe": null,
+        "nomorPO": null
+      }
+    },
+    {
+      "id": "5797196365:5797196365",
+      "data": {
+        "step": "INPUT_TANGGAL",
+        "hotel": "🏨 Hotel Golden",
+        "tanggal": null,
+        "tipe": null,
+        "nomorPO": null
+      }
+    }
+  ]
+}
